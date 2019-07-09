@@ -3,10 +3,10 @@ import * as ReactDOM from "react-dom";
 import "./index.css";
 import registerServiceWorker from "./registerServiceWorker";
 
-import { FunctionHello } from "./Components/Hello/Hello";
+import { ComponentHello } from "./Components/Hello/Hello";
 
 ReactDOM.render(
-    <FunctionHello name="Typescript" enthusiasmLevel={10} />,
-    document.getElementById("root") as HTMLElement
+  <ComponentHello name="Typescript" enthusiasmLevel={10} />,
+  document.getElementById("root") as HTMLElement
 );
 registerServiceWorker();

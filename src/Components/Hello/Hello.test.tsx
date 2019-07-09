@@ -19,9 +19,16 @@ describe("Render correctly given correct inputs and throw error given incorrect 
     );
   });
 
+  //Test failing unsure why
   test("Throws when enthusiasm is at 0 ", () => {
     expect(() => {
       enzyme.shallow(<ComponentHello name="Test Name" enthusiasmLevel={0} />);
+    }).toThrow();
+  });
+
+  test("Throws when enthusiasm is less then 0", () => {
+    expect(() => {
+      enzyme.shallow(<ComponentHello name="Test Name" enthusiasmLevel={-10} />);
     }).toThrow();
   });
 });
