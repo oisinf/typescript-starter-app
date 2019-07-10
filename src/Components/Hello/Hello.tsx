@@ -37,6 +37,7 @@ class ComponentHello extends React.Component<Props, State> {
                     {name + getExclaimationMarks(this.state.currentEnthusiasm)}
                 </div>
                 <button
+                    data-test="increment-button"
                     onClick={() =>
                         this.updateEnthusiasm(this.state.currentEnthusiasm + 1)
                     }
@@ -44,6 +45,7 @@ class ComponentHello extends React.Component<Props, State> {
                     +
                 </button>
                 <button
+                    data-test="decrement-button"
                     onClick={() =>
                         this.updateEnthusiasm(this.state.currentEnthusiasm - 1)
                     }
